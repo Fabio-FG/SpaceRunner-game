@@ -34,7 +34,7 @@ class Character {
     this.y -= this.charSpeed;
   };
 
-  charPlatformCollision (enemy) {
+  charPlatformCollision = (singlePipe) =>  {
     //singlePlatform.x
     //singlePlatform.y
     // check if char is colling with a platform
@@ -49,7 +49,7 @@ class Character {
     } else {
       return false;
     }*/
-
+/*
     //char
     let charLeft = this.x;
     let charRight = this.x + this.width;
@@ -74,11 +74,33 @@ class Character {
       return true;
     }else {
       return false;
-    }
+    }*/
+
+  
+        
+
+      //singlePipe.X;
+      //singlePipe.y;
+
+  // check if bird collides with one pipe 
+      if (this.x < singlePipe.x + singlePipe.width &&
+          this.x + this.width > singlePipe.x &&
+          this.y < singlePipe.y + singlePipe.height &&
+          this.height + this.y > singlePipe.y){
+              console.log("collision happening");
+              return true;
+          } else {
+              return false;
+          }
+      
+      //cause the game to end
+      // create boolean for the game to end, and trigger. Also check on requestAnimationFrame
+
+  }
 
 
   
-  };
+
 
   // game ends when colliding with "floor"
   // create boolean for the game to end and trigger, also check on request animationFrame

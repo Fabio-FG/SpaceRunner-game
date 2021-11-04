@@ -14,6 +14,8 @@ class Stone {
   //new Pipe ("./images/stone.png");
 
   drawStone = () => {
+    ctx.fillStyle = "white";
+    ctx.fillRect(this.x, this.y, this.width, this.height);
     ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
   };
 

@@ -23,11 +23,7 @@ class Game {
     this.stoneSpeed = 5;
   }
 
-  speedUp = () => {
-    if (this.score === 10) {
-      this.stoneSpeed + 5;
-    }
-  };
+  
 
   incrementScore = () => {
     this.score = this.score + 1;
@@ -46,9 +42,7 @@ class Game {
 
   //Methods
 
-  gravity = () => {
-    this.gravitySpeed += this.gravity;
-  };
+
 
   spawnStones = () => {
     // obstacle.js
@@ -79,7 +73,7 @@ class Game {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     // 2- movement and changes ---------------------------------
-
+    this.char.charGravity();
     
     /* this.stone.stoneMove(); */
     this.stoneArr.forEach((eachObstacle) => {
@@ -87,7 +81,7 @@ class Game {
     });
     
     // 3- Drawing -----------------------------------------------
-    this.char.charGravity();
+    
     
     ctx.drawImage(this.bg, 0, 0, canvas.width, canvas.height);
     this.char.drawChar();
