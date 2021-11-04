@@ -256,7 +256,7 @@ h1 {
 #my-canvas{
     margin: auto;
     position: relative;
-    background-image: url(../images/space.png);
+    background-image: url(./images/space.png);
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 10px;
@@ -294,7 +294,7 @@ h1 {
 
 .play-button{ /* Just for the start button background image */
     height:50px;
-    background-image: url(../images/playgame.png);
+    background-image: url(./images/playgame.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 0px;
@@ -320,7 +320,7 @@ h1 {
 
 #start-btn:hover {
     background-color: rgb(49, 48, 48);
-    background-image: url(../images/whiteplay.png);
+    background-image: url(./images/whiteplay.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 0px;
@@ -344,7 +344,7 @@ h1 {
     margin: auto;
     width: 110px;
     height: 110px;
-    background-image: url(../images/restart-button.png);
+    background-image: url(./images/restart-button.png);
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 50%;
@@ -354,7 +354,7 @@ h1 {
 
 #restart-btn:hover {
     background-color: rgb(49, 48, 48);
-    background-image: url(../images/restart-button-white.png);
+    background-image: url(./images/restart-button-white.png);
     padding: 5px;
     background-repeat: no-repeat;
     background-position: 0px;
@@ -393,6 +393,7 @@ h1 {
 
 .footer p{
     margin-top: 15px;
+    
 }
 
 .contacts {
@@ -447,7 +448,7 @@ h1 {
 
     .play-button{ /* Just for the start button background image */
         height:50px;
-        background-image: url(../images/playgame.png);
+        background-image: url(./images/playgame.png);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: 0px;
@@ -473,7 +474,7 @@ h1 {
     
     #start-btn:active {
         background-color: rgb(49, 48, 48);
-        background-image: url(../images/whiteplay.png);
+        background-image: url(./images/whiteplay.png);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: 0px;
@@ -487,7 +488,7 @@ h1 {
         margin: auto;
         width: 70px;
         height: 70px;
-        background-image: url(../images/restart-button.png);
+        background-image: url(./images/restart-button.png);
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: 50%;
@@ -497,7 +498,7 @@ h1 {
     
     #restart-btn:active {
         background-color: rgb(49, 48, 48);
-        background-image: url(../images/restart-button-white.png);
+        background-image: url(./images/restart-button-white.png);
         padding: 5px;
         background-repeat: no-repeat;
         background-position: 0px;
@@ -608,7 +609,7 @@ and (orientation : landscape) {
 
     .play-button{ /* Just for the start button background image */
         height:50px;
-        background-image: url(../images/playgame.png);
+        background-image: url(./images/playgame.png);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: 0px;
@@ -634,7 +635,7 @@ and (orientation : landscape) {
     
     #start-btn:active {
         background-color: rgb(49, 48, 48);
-        background-image: url(../images/whiteplay.png);
+        background-image: url(./images/whiteplay.png);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: 0px;
@@ -648,7 +649,7 @@ and (orientation : landscape) {
         margin: auto;
         width: 70px;
         height: 70px;
-        background-image: url(../images/restart-button.png);
+        background-image: url(./images/restart-button.png);
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: 50%;
@@ -658,7 +659,7 @@ and (orientation : landscape) {
     
     #restart-btn:active {
         background-color: rgb(49, 48, 48);
-        background-image: url(../images/restart-button-white.png);
+        background-image: url(./images/restart-button-white.png);
         padding: 5px;
         background-repeat: no-repeat;
         background-position: 0px;
