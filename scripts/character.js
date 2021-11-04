@@ -6,7 +6,7 @@ class Character {
     this.height = 80;
     this.x = canvas.width / 5;
     this.y = canvas.height / 2;
-    this.charSpeed = 200;
+    this.charSpeed = 190;
     this.isOnFloor = true;
   }
 
@@ -20,7 +20,7 @@ class Character {
     const playerTop = this.y; 
     if (playerTop < 345) {
       //controls the gravity and where he stops from falling
-      this.y += 2;
+      this.y += 2.5;
       this.isOnFloor = false;
     } else {
       // console.log(this.y);
@@ -30,7 +30,7 @@ class Character {
   };
 
   charJump ()  {
-    console.log("this", this);
+    //console.log("this", this);
     this.y -= this.charSpeed;
   };
 

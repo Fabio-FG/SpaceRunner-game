@@ -18,16 +18,18 @@ class Game {
     this.gapBetweenPlatforms = 150;
     this.platformAppearingDistance = 350;
     this.isGameOver = false;
-    this.score = 1;
+    this.score = 0;
     this.floorPosition = 0;
-    this.stoneSpeed = 5;
+    this.stoneSpeed = 3;
   }
-
-  
 
   incrementScore = () => {
     this.score = this.score + 1;
     scoreDisplay.textContent = this.score;
+    if(this.score % 6 === 0) {
+      console.log(this.stoneSpeed);
+      this.stoneSpeed += 1;
+    }
   };
 
   gameover = () => {
@@ -42,19 +44,21 @@ class Game {
 
   //Methods
 
-
-
   spawnStones = () => {
     // obstacle.js
     //console.log("Adding stone");
     //gettting the space betweeen stones
     let lastIndex = this.stoneArr.length - 1;
     let lastStone = this.stoneArr[lastIndex];
-    if (lastStone.x === this.platformAppearingDistance) {
+   
+      
+    if (lastStone.x < this.platformAppearingDistance) {
       // changing the distance between platforms (less increases the distances)
       //let randomPosY = Math.random() * - canvas.height / 3
       let platform = new Stone("./images/platform.png", this.stoneSpeed);
+     
       this.stoneArr.push(platform);
+      console.log("hrllo");  
     }
   };
 
@@ -74,15 +78,17 @@ class Game {
 
     // 2- movement and changes ---------------------------------
     this.char.charGravity();
-    
+
     /* this.stone.stoneMove(); */
     this.stoneArr.forEach((eachObstacle) => {
+
       eachObstacle.stoneMove();
+     
     });
+
     
     // 3- Drawing -----------------------------------------------
-    
-    
+
     ctx.drawImage(this.bg, 0, 0, canvas.width, canvas.height);
     this.char.drawChar();
     //drawing the obstacles
@@ -112,11 +118,7 @@ class Game {
 
     //platform movement
 
-    
-
     this.spawnStones();
-
-   
 
     // 4- animation frame and game logic changes
     if (!this.isGameOver) {

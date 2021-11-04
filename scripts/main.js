@@ -34,44 +34,29 @@ let game;
 // ****   Functions : ****
 
 //Starting the game
-const startGame = () => {
-    game = new Game();
-    game.gameLoop();
-    
-    
-}
+
 
 
 
 
 
 //Game Over function 
-const restartGame = () => {
-    /*restartScreen.style.display = "none";
-    canvas.style.display ="flex";*/
-    game = new Game();
-    
-    //Need to restart the game
-    game.gameLoop();
-}
 
 
 
 
 // **** ADD EVENT LISTERNERS
-startButton.addEventListener("click", startGame);
-restartButton.addEventListener("click", restartGame);
+
+
 
 
 startButton.addEventListener("click", () => {
+    
     //hide starting screen
     startScreen.style.display = "none";
-    
     //show the canvas 
     canvas.style.display = "flex";
     //start the game
-
-
     // Class for the game , when clicked it will create 1 element of that class
 
     game = new Game();
@@ -85,6 +70,7 @@ restartButton.addEventListener("click", () => {
     restartButton.style.display = "none";
         //show the canvas 
     canvas.style.display = "flex";
+    scoreDisplay.innerHTML = 0;
     
     //start the game
     // Class for the game , when clicked it will create 1 element of that class

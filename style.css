@@ -1,6 +1,7 @@
 
 @import url('http://fonts.cdnfonts.com/css/niagaraphobia');
 
+
 html {
     scroll-behavior: smooth;  /* According to research, there are drawbacks with some browsers */ 
 }
@@ -559,6 +560,169 @@ h1 {
 }
 
 
+
+
+ /* Ipad LANDSCAPE VIEW */
+
+ 
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) { 
+    h1 {
+        color:black;
+        font-size: 1.5em;
+    }
+
+   
+    
+    .nav-bar h1{
+        font-size: 1.3em;
+    }
+
+    #my-canvas {
+        width: 100%
+        height:300px;
+
+        
+    }
+
+
+    .instro-title{
+        margin-top: -200px;
+        text-transform: uppercase;
+        text-decoration: underline;
+    }
+    
+    .instructions {
+        
+        line-height: 10px;
+        font-size: 1.5em;
+        margin-bottom: 50px;
+    }
+
+    .play-button{ /* Just for the start button background image */
+        height:50px;
+        background-image: url(../images/playgame.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 0px;
+    }
+    
+    #start-btn {
+        background-color: rgb(255, 255, 255);
+        color: white;
+        padding: 10px;
+        margin: auto;
+        display: block;
+        margin-bottom: 20px;
+        width: 70px;
+        height: 70px;
+        text-align: center;
+        text-transform:uppercase;
+        border-radius: 50%;
+        border: 3px solid black;
+        
+        
+    }
+    
+    
+    #start-btn:active {
+        background-color: rgb(49, 48, 48);
+        background-image: url(../images/whiteplay.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 0px;
+        transition-duration: 0.5s;
+    
+    }
+
+    #restart-btn {
+        background-color: white;
+        border: 2px solid rgb(0, 0, 0);
+        margin: auto;
+        width: 70px;
+        height: 70px;
+        background-image: url(../images/restart-button.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 50%;
+        
+        
+    }
+    
+    #restart-btn:active {
+        background-color: rgb(49, 48, 48);
+        background-image: url(../images/restart-button-white.png);
+        padding: 5px;
+        background-repeat: no-repeat;
+        background-position: 0px;
+        border-radius: 50%;
+        z-index: 2;
+    
+    }
+    
+    .about-title {
+        font-size: 2.5em;
+        margin-top:4%;
+        color: white;
+    }
+    
+    
+    .about-container {
+        line-height: 1em;
+        letter-spacing: 1.2px;
+        font-size: 1em;
+        width: 100%;
+        margin-top: 2%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .image-1 {
+        background-color: rgb(19, 18, 18);
+        height: 200px;
+        color: white;
+        width: 60%;
+        margin-left: 2%;
+        margin-bottom: 25px;
+    }
+    
+    .about-text{
+        color: white;
+        background-color: rgb(19, 18, 18);
+        width: 75%;
+        margin-right: 2%;
+    }
+    
+    .about-text p{
+        margin: 15px;
+        text-align: justify;
+        line-height: 1.4em;
+    }
+    
+   
+    
+
+    .footer {
+        background-color: rgb(31, 31, 31);
+        bottom: 0;
+        text-align: center;
+        font-size: 0.9em;
+    }
+
+    .footer h2 {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+
+
+
+}
 
 
 
