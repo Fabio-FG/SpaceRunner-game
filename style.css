@@ -379,7 +379,7 @@ h1 {
     margin-top: 10px;
     border-top: 2px solid rgb(44, 44, 44);
     line-height: 1.5em;
-    height: 150px;
+    height: 180px;
     
     
     
@@ -564,7 +564,7 @@ h1 {
 
  /* Ipad LANDSCAPE VIEW */
 
- 
+
 @media only screen 
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) 
