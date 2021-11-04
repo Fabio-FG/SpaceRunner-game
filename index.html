@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Runner</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="http://fonts.cdnfonts.com/css/mtf-pork-chop" rel="stylesheet">
+                
+</head>
+<body>
+    <div class="page-container">
+
+<!-- nav bar -->
+<nav class="nav-bar">
+    <h1>Space Runner</h1>
+    
+    <ul class="menu">
+        
+        <li><a href="#about">About</a></li>
+        <li><a href="https://www.facebook.com/IshiroKuroyama" target="_blank"><img src="/images/facebook-white.png" class="socials" alt="facebook-logo"/></a></li>
+        <li><a href="https://www.instagram.com/ishirokuroyama/"target="_blank"><img src="/images/instagram-white.png" class="socials" alt="instagram-logo"/></a></li>
+    </ul>
+    
+</nav>
+<div class="score">
+    <h1 id="game-title">Space Runner</h1>
+    <h1 class="score">Jump Score : <span> 0</span> </h1>
+</div>   
+    <div class="container">
+        <!-- Start screen -->
+        <div id="start-screen">
+            <h1 class="instro-title">Instructions</h1>
+            <div class="instructions">
+                <p>1. Press W or ArrowUp to jump</p>
+                <p>2. Survive the space debris!</p>
+                <p>3. Have fun!</p>
+            </div>
+            <!--<h1 class="start-text">Test your skill!</h1>-->
+            <button id="start-btn" class="play-button"></button>
+        </div>   
+
+        <canvas id="my-canvas" width="900px" height="500px"></canvas> 
+
+        <!--Restart screen -->
+        <div id="restart-screen">
+            <button id="restart-btn"></button>
+        </div> 
+
+        <!--About section -->
+    <h1 class="about-title">About Space Runner</h1>
+    
+    <section class="about-container" id="about">
+        <div class="image-1">
+            <img src="images/imgback.jpg" alt="game-picture" id="about-img"/>
+        </div>
+        <div class="about-text">
+         <p> The Space Runner project is a platform 2D game made  with canvas in HTML,CSS and JavaScript.
+         It was inspired by a personal on-going project, a manga called "Zetsumetsu" -  artwork made by me  (using the PEN Name: IshiroKuroyama).  </p>
+        </div>
+    </section>
+        
+
+
+
+
+    </div>
+
+
+    <div class="footer">
+        
+        <p>Game designed by Fábio.G&copy;<br>
+            Credit to the Lead Teacher, TAs, Diogo M. and Karina F.<br>
+        Copyright &copy;2021</p>
+        <div class="contacts">
+            <a href="https://www.facebook.com/IshiroKuroyama" target="_blank"><img src="/images/facebook-white.png" class="socials"     alt="facebook-logo"/></a></li>
+            <a href="https://www.instagram.com/ishirokuroyama/"target="_blank"><img src="/images/instagram-white.png" class="socials"   alt="instagram-logo"/></a></li>
+        </div>
+        
+    </div>
+</div>
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/game.js"></script>
+    <script src="./scripts/character.js"></script>
+    <script src="./scripts/obstacle.js"></script>
+    <script src="./scripts/floor.js"></script>
+</body>
+</html>

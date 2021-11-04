@@ -1,0 +1,576 @@
+
+@import url('http://fonts.cdnfonts.com/css/mtf-pork-chop');
+@import url('http://fonts.cdnfonts.com/css/niagaraphobia');
+
+html {
+    scroll-behavior: smooth;  /* According to research, there are drawbacks with some browsers */ 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-family: 'Niagaraphobia', sans-serif;
+    background-color: rgb(5, 5, 5);
+    
+}
+
+
+
+
+.page-container {
+    position: relative;
+    
+}
+
+.score {
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
+
+.socials {
+    width: 20px;
+    height: 20px;
+}
+
+
+
+
+/*  NAVBAR STYLE - Hover effect credit from @https://codepen.io/kiran-r-raj/pen/mdRvqMY */ 
+
+
+.nav-bar {
+    display: flex;
+    background-color: rgb(31, 31, 31);
+    width: 100%;
+    height: 42px;
+}
+
+
+
+.nav-bar h1 { /* Soon to be game logo or just difference lettering */ 
+    color:rgb(212, 212, 212);
+    margin-left: 10px;
+    width: 200px;
+    margin-top: 8px;
+    
+}
+
+.nav-bar ul{
+    display: flex;
+    width: 100%;
+    justify-content:end;
+    margin-top: 2px;
+    margin-right: 10px;
+    height: 40px;
+    
+}
+
+.nav-bar li{
+    list-style: none;  
+    display: block;    
+    position: relative;    
+    display: flex; 
+    text-shadow: 0 0px 5px #b4adc0;
+    padding: 0 15px;
+    margin-right: 10px;
+
+    
+}
+
+
+
+.nav-bar a {
+    color:rgb(214, 214, 214);
+    text-decoration: none;
+    margin-right: 10px;
+    margin-top: 10px;
+    
+    
+}
+
+.menu li:after,
+.menu li:before{
+    
+  content: "";
+  position: absolute;
+  display: block;
+  border: 0px solid transparent;
+  width: 0%;
+  height: 0%;
+  transition: all 0.5s ease;
+  pointer-events: none;  /* without it the anchors don't work*/ 
+  
+}
+
+
+.menu li:after {
+    width: 0%;
+    height: 0%;
+    top: 0;
+    left: 0;
+    border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
+    
+}
+
+
+.menu li:before {
+    width: 0%;
+    height: 0%;
+    right: 0;
+    bottom: 0;
+    border-bottom: 1px solid transparent;
+    border-right: 1px solid transparent; 
+    
+}
+
+.menu li:hover::before,
+.menu li:hover::after {
+  width: 84%;
+  height: 100%;
+  border-color: #fff;
+  margin-right: 10px;
+  
+  
+}
+
+.instro-title{
+    margin-top: -150px;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.instructions {
+    
+    line-height: 10px;
+    font-size: 1.5em;
+    margin-bottom: 50px;
+}
+
+
+
+/* ////////////////////// PREVIOUS HOVER /////////
+.nav-bar a:hover {
+    padding: 15px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(216, 216, 216);
+    border-radius: 10px;
+    transition-duration: 0.5s;
+    
+}*/
+
+#game-title{
+    font-size: 3em;
+    color: rgb(255, 255, 255);
+   
+}
+
+
+/*------------------------------------------------------------ About page stylling ---------------------------------------------- */
+
+.about-title {
+    font-size: 2.5em;
+    margin-top:8%;
+    color: white;
+}
+
+
+.about-container {
+    
+    line-height: 1.3em;
+    letter-spacing: 1.5px;
+    font-size: 1.2em;
+    width: 100%;
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+    
+}
+
+.about-text{
+    color: white;
+    background-color: rgb(19, 18, 18);
+    width: 35%;
+    margin-right: 2%;
+    /*border: 3px solid white;*/
+    border-radius: 5px;
+}
+
+.about-text p{
+    margin: 15px;
+    text-align: justify;
+    line-height: 1.4em;
+}
+
+.image-1 {
+    background-color: rgb(19, 18, 18);
+    height: 200px;
+    color: white;
+    width: 15%;
+    margin-left: 2%;
+    margin-right: 15px;
+    display: flex;
+    flex-direction: column;
+    /*border: 3px solid white;*/
+    border-radius: 5px;
+    
+}
+
+#about-img {
+    height: 100%;
+    border-radius: 4px;
+}
+
+
+
+
+
+/* --------------------------------------- END OF ABOUT PAGE STYLLING ---------------------------------------------------*/
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+   
+    
+}
+
+#my-canvas{
+    margin: auto;
+    position: relative;
+    background-image: url(./images/space.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    border: 2px solid white;
+}
+
+#start-screen {
+    position: absolute;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    z-index: 2;
+    margin-top: 220px;
+    
+}
+
+#restart-screen {
+    position: absolute;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    z-index: 2;
+    margin-top: 190px;
+    border-radius: 10px solid black;
+    
+    
+    
+}
+
+
+
+
+
+/* start button style */ 
+
+.play-button{ /* Just for the start button background image */
+    height:50px;
+    background-image: url(./images/playgame.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px;
+}
+
+#start-btn {
+    background-color: rgb(255, 255, 255);
+    color: white;
+    padding: 10px;
+    margin: auto;
+    display: block;
+    margin-bottom: 20px;
+    width: 110px;
+    height: 110px;
+    text-align: center;
+    text-transform:uppercase;
+    border-radius: 50%;
+    border: 3px solid black;
+    
+    
+}
+
+
+#start-btn:hover {
+    background-color: rgb(49, 48, 48);
+    background-image: url(./images/whiteplay.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px;
+    transition-duration: 0.5s;
+
+}
+
+
+/* restart button - TBD */
+
+#gameover-img {
+    height: 20px;
+}
+
+
+
+
+#restart-btn {
+    background-color: white;
+    border: 2px solid rgb(0, 0, 0);
+    margin: auto;
+    width: 110px;
+    height: 110px;
+    background-image: url(./images/restart-button.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    
+    
+}
+
+#restart-btn:hover {
+    background-color: rgb(49, 48, 48);
+    background-image: url(./images/restart-button-white.png);
+    padding: 5px;
+    background-repeat: no-repeat;
+    background-position: 0px;
+    border-radius: 50%;
+    z-index: 2;
+
+}
+
+
+
+
+
+
+
+
+
+
+/* footer style */
+
+.footer {
+    background-color: rgb(31, 31, 31);
+    color:  rgb(212, 212, 212);
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 10px;
+    border-top: 2px solid rgb(44, 44, 44);
+    line-height: 1.5em;
+    height: 150px;
+    
+    
+    
+    
+}
+
+.footer p{
+    margin-top: 15px;
+}
+
+.contacts {
+    
+    width: 8%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+
+    
+}
+
+.contacts a {
+    
+}
+
+
+/** --------------------------------------------------- media queries ---------------------------------------------- **/ 
+
+
+@media only screen and (max-width: 600px) {
+    
+
+    h1 {
+        color:black;
+        font-size: 1.5em;
+    }
+
+    .nav-bar h1{
+        font-size: 1.3em;
+    }
+
+    #my-canvas {
+        width: 350px;
+        height:300px;
+        
+    }
+
+
+    .instro-title{
+        margin-top: -200px;
+        text-transform: uppercase;
+        text-decoration: underline;
+    }
+    
+    .instructions {
+        
+        line-height: 10px;
+        font-size: 1.5em;
+        margin-bottom: 50px;
+    }
+
+    .play-button{ /* Just for the start button background image */
+        height:50px;
+        background-image: url(./images/playgame.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 0px;
+    }
+    
+    #start-btn {
+        background-color: rgb(255, 255, 255);
+        color: white;
+        padding: 10px;
+        margin: auto;
+        display: block;
+        margin-bottom: 20px;
+        width: 70px;
+        height: 70px;
+        text-align: center;
+        text-transform:uppercase;
+        border-radius: 50%;
+        border: 3px solid black;
+        
+        
+    }
+    
+    
+    #start-btn:active {
+        background-color: rgb(49, 48, 48);
+        background-image: url(./images/whiteplay.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 0px;
+        transition-duration: 0.5s;
+    
+    }
+
+    #restart-btn {
+        background-color: white;
+        border: 2px solid rgb(0, 0, 0);
+        margin: auto;
+        width: 70px;
+        height: 70px;
+        background-image: url(./images/restart-button.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 50%;
+        
+        
+    }
+    
+    #restart-btn:active {
+        background-color: rgb(49, 48, 48);
+        background-image: url(./images/restart-button-white.png);
+        padding: 5px;
+        background-repeat: no-repeat;
+        background-position: 0px;
+        border-radius: 50%;
+        z-index: 2;
+    
+    }
+    
+    .about-title {
+        font-size: 2.5em;
+        margin-top:4%;
+        color: white;
+    }
+    
+    
+    .about-container {
+        line-height: 1em;
+        letter-spacing: 1.2px;
+        font-size: 1em;
+        width: 100%;
+        margin-top: 2%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .image-1 {
+        background-color: rgb(19, 18, 18);
+        height: 200px;
+        color: white;
+        width: 60%;
+        margin-left: 2%;
+        margin-bottom: 25px;
+    }
+    
+    .about-text{
+        color: white;
+        background-color: rgb(19, 18, 18);
+        width: 75%;
+        margin-right: 2%;
+    }
+    
+    .about-text p{
+        margin: 15px;
+        text-align: justify;
+        line-height: 1.4em;
+    }
+    
+   
+    
+
+    .footer {
+        background-color: rgb(31, 31, 31);
+        bottom: 0;
+        text-align: center;
+        font-size: 0.9em;
+    }
+
+    .footer h2 {
+        text-align: center;
+        margin-top: 50px;
+    }
+}
+
+
+
+
+
+
+
+  /* hide canvas and gameover screen elements at the beginning */
+
+ /* #my-canvas {
+      display: none;
+  }*/
+
+  #restart-btn {
+      display: none;
+  }
