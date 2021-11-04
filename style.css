@@ -1,6 +1,4 @@
 
-
-
 @font-face {
     font-family: 'niagaraphobia';
     src: url(./Assets/Niagaraphobia.otf);
@@ -63,7 +61,7 @@ h1 {
 
 
 
-.nav-bar h1 { /* Soon to be game logo or just difference lettering */ 
+.nav-bar h1 {
     color:rgb(212, 212, 212);
     margin-left: 10px;
     width: 200px;
@@ -89,14 +87,19 @@ h1 {
     text-shadow: 0 0px 5px #b4adc0;
     padding: 0 15px;
     margin-right: 10px;
+    
 
     
+}
+
+.nav-bar img{
+    filter: drop-shadow(0 0px 5px #b4adc0);
 }
 
 
 
 .nav-bar a {
-    color:rgb(214, 214, 214);
+    color:rgb(255, 255, 255);
     text-decoration: none;
     margin-right: 10px;
     margin-top: 10px;
