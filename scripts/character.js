@@ -6,21 +6,21 @@ class Character {
     this.height = 80;
     this.x = canvas.width / 5;
     this.y = canvas.height / 2;
-    this.charSpeed = 190;
-    this.radious = 1;
+    this.charSpeed = 200;
     this.isOnFloor = true;
   }
 
   //Methods
 
-  drawChar = () => {
+  drawChar () {
     ctx.drawImage(this.charImage, this.x, this.y, this.width, this.height);
   };
 
-  charGravity = () => {
-    if (this.y - this.height < 295) {
+  charGravity () {
+    const playerTop = this.y; 
+    if (playerTop < 345) {
       //controls the gravity and where he stops from falling
-      this.y += 3;
+      this.y += 2;
       this.isOnFloor = false;
     } else {
       // console.log(this.y);
@@ -29,11 +29,12 @@ class Character {
     }
   };
 
-  charJump = () => {
+  charJump ()  {
+    console.log("this", this);
     this.y -= this.charSpeed;
   };
 
-  charPlatformCollision = (enemy) => {
+  charPlatformCollision (enemy) {
     //singlePlatform.x
     //singlePlatform.y
     // check if char is colling with a platform
@@ -68,6 +69,7 @@ class Character {
     let crossTop = enemyTop <= charBottom && enemyTop >= charTop;
 
     if((crossLeft || crossRight) && (crossTop || crossBottom)){
+      debugger;
       console.log("collision detected");
       return true;
     }else {
@@ -89,13 +91,5 @@ class Character {
     this.x = this.x - 32;
   };
 
-  stayPlataform = () => {
-    if (
-      this.y + this.radious > game.stoneArr.x &&
-      this.x > game.stoneArr.x &&
-      this.x < game.stoneArr.x + game.stoneArr.width
-    ) {
-      this.y = -1;
-    }
-  };
+  
 }

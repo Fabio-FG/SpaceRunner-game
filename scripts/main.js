@@ -82,7 +82,8 @@ startButton.addEventListener("click", () => {
 restartButton.addEventListener("click", () => {
     //hide starting screen
     restartScreen.style.display = "none";
-    //show the canvas 
+    restartButton.style.display = "none";
+        //show the canvas 
     canvas.style.display = "flex";
     
     //start the game
@@ -135,29 +136,31 @@ window.addEventListener("keydown", (event) => {
 
 
 
-canvas.addEventListener("click", () => {      
-    //char jump
-    if( game.char.isOnFloor){
-        game.char.charJump();
-        game.incrementScore();
-    }
 
-    //if statement to restrict the jump
-    /*if(game.char.y > canvas.height){
-        char.y - 1;
-    }*/
-})
 
 
 //Event Listener to prevent the screen from scrolling while using space or arrows
 window.addEventListener("keydown", function(e) {
-    if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
+    if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].includes(e.code)) {
         e.preventDefault();
     }
 }, false);
 
 
-
+window.addEventListener("load", () => {
+    canvas.addEventListener("click", () => {      
+        //char jump
+        if( game.char.isOnFloor){
+            game.char.charJump();
+            game.incrementScore();
+        }
+    
+        //if statement to restrict the jump
+        /*if(game.char.y > canvas.height){
+            char.y - 1;
+        }*/
+    })
+})
 
 
 

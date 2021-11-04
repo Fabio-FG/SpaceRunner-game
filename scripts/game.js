@@ -80,13 +80,27 @@ class Game {
 
     // 2- movement and changes ---------------------------------
 
-
-    this.speedUp();
-    this.char.charGravity();
+    
     /* this.stone.stoneMove(); */
     this.stoneArr.forEach((eachObstacle) => {
       eachObstacle.stoneMove();
     });
+    
+    // 3- Drawing -----------------------------------------------
+    this.char.charGravity();
+    
+    ctx.drawImage(this.bg, 0, 0, canvas.width, canvas.height);
+    this.char.drawChar();
+    //drawing the obstacles
+    /* this.stone.drawStone(); */
+
+    this.stoneArr.forEach((eachObstacle) => {
+      eachObstacle.drawStone();
+    });
+
+    /*this.floorArr.forEach((eachPlatform) => {
+  eachPlatform.drawFloor();
+});*/
 
     //Collision detected for the platforms
     this.stoneArr.forEach((eachPlatform) => {
@@ -104,28 +118,12 @@ class Game {
 
     //platform movement
 
-    this.floorArr.forEach((eachPlatform) => {
-      eachPlatform.floorMove();
-    });
+    
 
     this.spawnStones();
 
-    this.char.stayPlataform();
+   
 
-    // 3- Drawing -----------------------------------------------
-
-    ctx.drawImage(this.bg, 0, 0, canvas.width, canvas.height);
-    this.char.drawChar();
-    //drawing the obstacles
-    /* this.stone.drawStone(); */
-
-    this.stoneArr.forEach((eachObstacle) => {
-      eachObstacle.drawStone();
-    });
-
-    this.floorArr.forEach((eachPlatform) => {
-      eachPlatform.drawFloor();
-    });
     // 4- animation frame and game logic changes
     if (!this.isGameOver) {
       requestAnimationFrame(this.gameLoop);

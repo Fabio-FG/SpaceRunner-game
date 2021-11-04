@@ -3,9 +3,9 @@ class Stone {
     this.image = new Image();
     this.image.src = srcImage;
     this.width = 50;
-    this.height = 30;
+    this.height = 50;
     this.x = canvas.width;
-    this.y = 400;
+    this.y = 380;
     this.speedX = speedX;
   }
 
