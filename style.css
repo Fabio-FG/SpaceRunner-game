@@ -1,5 +1,10 @@
 
-@import url('http://fonts.cdnfonts.com/css/niagaraphobia');
+
+
+@font-face {
+    font-family: 'niagaraphobia';
+    src: url(./Assets/Niagaraphobia.otf);
+  }
 
 
 html {
@@ -13,7 +18,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    font-family: 'Niagaraphobia', sans-serif;
+    font-family: 'niagaraphobia', sans-serif;
     background-color: rgb(5, 5, 5);
     
 }
