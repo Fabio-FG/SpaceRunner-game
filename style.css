@@ -1,5 +1,5 @@
 
-@import url('./http://fonts.cdnfonts.com/css/niagaraphobia');
+@import url('http://fonts.cdnfonts.com/css/niagaraphobia');
 
 html {
     scroll-behavior: smooth;  /* According to research, there are drawbacks with some browsers */ 
