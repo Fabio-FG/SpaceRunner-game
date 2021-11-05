@@ -157,7 +157,8 @@ h1 {
     margin-top: -150px;
     text-transform: uppercase;
     text-decoration: underline;
-    color: rgb(0, 0, 0);
+    color: white;
+    text-shadow: 2px 2px black;
 
 }
 
@@ -166,7 +167,8 @@ h1 {
     line-height: 10px;
     font-size: 1.5em;
     margin-bottom: 50px;
-    color: rgb(0, 0, 0);
+    color: white;
+    text-shadow: 2px 2px black;
     
 }
 
@@ -289,7 +291,7 @@ h1 {
     width: 100%;
     z-index: 2;
     margin-top: 190px;
-    border-radius: 10px solid black;
+   
     
     
     
@@ -338,7 +340,6 @@ h1 {
 }
 
 
-/* restart button - TBD */
 
 #gameover-img {
     height: 20px;
@@ -348,15 +349,17 @@ h1 {
 
 
 #restart-btn {
+    
     background-color: white;
-    border: 2px solid rgb(0, 0, 0);
+    border: hidden;
     margin: auto;
     width: 110px;
     height: 110px;
     background-image: url(./images/restart-button.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
     border-radius: 50%;
+    
     
     
 }
