@@ -26,9 +26,15 @@ class Game {
   incrementScore = () => {
     this.score = this.score + 1;
     scoreDisplay.textContent = this.score;
-    if(this.score % 7 === 0) {
+    if(this.score % 8 === 0) {
       //console.log(this.stoneSpeed);
       this.stoneSpeed += 1;
+    }
+
+    //stop the jump keys from adding score after game over
+    if(this.isGameOver === true){
+      this.score = this.score += 0;
+      scoreDisplay.textContent = this.score;
     }
   };
 
@@ -40,6 +46,8 @@ class Game {
 
     //Show restart
     restartScreen.style.display = "flex";
+    
+    
   };
 
   //Methods
