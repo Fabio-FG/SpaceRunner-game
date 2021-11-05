@@ -10,11 +10,11 @@ class Game {
     // 5 - ...
 
     this.bg = new Image();
-    this.bg.src = "./images/space.png"; // setting up the bg
+    this.bg.src = "./images/bg-made.jpg"; // setting up the bg
     this.char = new Character();
     /*  this.stone = new Stone("./images/rock.png", null); */
-    this.stoneArr = [new Stone("./images/platform.png", 5)]; //originally rock.png but changed to get double platforms
-    this.floorArr = [new Floor("")];
+    this.stoneArr = [new Stone("./images/debris.png", 5)]; //originally rock.png but changed to get double platforms
+    //this.floorArr = [new Floor("")];
     this.gapBetweenPlatforms = 150;
     this.platformAppearingDistance = 350;
     this.isGameOver = false;
@@ -26,8 +26,8 @@ class Game {
   incrementScore = () => {
     this.score = this.score + 1;
     scoreDisplay.textContent = this.score;
-    if(this.score % 6 === 0) {
-      console.log(this.stoneSpeed);
+    if(this.score % 7 === 0) {
+      //console.log(this.stoneSpeed);
       this.stoneSpeed += 1;
     }
   };
@@ -55,10 +55,10 @@ class Game {
     if (lastStone.x < this.platformAppearingDistance) {
       // changing the distance between platforms (less increases the distances)
       //let randomPosY = Math.random() * - canvas.height / 3
-      let platform = new Stone("./images/platform.png", this.stoneSpeed);
+      let platform = new Stone("./images/debris.png", this.stoneSpeed);
      
       this.stoneArr.push(platform);
-      console.log("hrllo");  
+      //console.log("hrllo");  
     }
   };
 

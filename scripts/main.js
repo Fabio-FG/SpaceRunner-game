@@ -31,17 +31,6 @@ let scoreDisplay = document.querySelector(".score span");
 let game;
 
 
-// ****   Functions : ****
-
-//Starting the game
-
-
-
-
-
-
-//Game Over function 
-
 
 
 
@@ -79,12 +68,13 @@ restartButton.addEventListener("click", () => {
 })
 
 window.addEventListener("keydown", (event) => {
-    console.log("pressing things", event.code);
+    //console.log("pressing things", event.code);
 
     
     //check which event is triggered with if statement, if a key that i want is pressed, move the char
+    // isGameOver == true to prevent score to increment while pressing the jump keys.
     if( event.code === "KeyW") {
-        if( game.char.isOnFloor){
+        if( game.char.isOnFloor ){
             game.char.charJump();
             game.incrementScore();
         }
@@ -92,7 +82,7 @@ window.addEventListener("keydown", (event) => {
 
 
     if( event.code === "Space") {
-        if( game.char.isOnFloor){
+        if( game.char.isOnFloor ){
             game.char.charJump();
             game.incrementScore();
         }

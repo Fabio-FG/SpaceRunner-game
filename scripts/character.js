@@ -1,18 +1,19 @@
 class Character {
   constructor() {
     this.charImage = new Image();
-    this.charImage.src = "./images/deadpool.png";
+    this.charImage.src = "./images/atlas.png";
     this.width = 80;
     this.height = 80;
     this.x = canvas.width / 5;
     this.y = canvas.height / 2;
-    this.charSpeed = 190;
+    this.charSpeed = 205;
     this.isOnFloor = true;
   }
 
   //Methods
 
   drawChar () {
+    
     ctx.drawImage(this.charImage, this.x, this.y, this.width, this.height);
   };
 
@@ -35,54 +36,7 @@ class Character {
   };
 
   charPlatformCollision = (singlePipe) =>  {
-    //singlePlatform.x
-    //singlePlatform.y
-    // check if char is colling with a platform
-    /*if (
-      this.x < singlePlatform.x + singlePlatform.width &&
-      this.x + this.width > singlePlatform.x &&
-      this.y < singlePlatform.y + singlePlatform.height &&
-      this.height + this.y > singlePlatform.y
-    ) {
-      console.log("Collision detected");
-      return true;
-    } else {
-      return false;
-    }*/
-/*
-    //char
-    let charLeft = this.x;
-    let charRight = this.x + this.width;
-    let charTop = this.y;
-    let charBottom = this.y + this.height;
-
-    //enemy obstacle
-    let enemyLeft = enemy.x;
-    let enemyRight = enemy.x + enemy.width;
-    let enemyTop = enemy.y;
-    let enemyBottom = enemy.y + enemy.height;
-
-    //crossing
-    let crossLeft = enemyLeft <= charRight && enemyLeft >= charLeft;
-    let crossRight = enemyRight >= charLeft && enemyRight <= charRight;
-    let crossBottom = enemyBottom >= charTop && enemyBottom <= charBottom;
-    let crossTop = enemyTop <= charBottom && enemyTop >= charTop;
-
-    if((crossLeft || crossRight) && (crossTop || crossBottom)){
-      debugger;
-      console.log("collision detected");
-      return true;
-    }else {
-      return false;
-    }*/
-
-  
-        
-
-      //singlePipe.X;
-      //singlePipe.y;
-
-  // check if bird collides with one pipe 
+    
       if (this.x < singlePipe.x + singlePipe.width &&
           this.x + this.width > singlePipe.x &&
           this.y < singlePipe.y + singlePipe.height &&
