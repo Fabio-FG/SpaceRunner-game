@@ -1,4 +1,4 @@
 Running game using Canvas.
 
 
-<a href="https://fabio-fg.github.io/game-project/">Live Demo </a>
+<a href="https://spacerunner-thegame.netlify.app/">Live Demo </a>
