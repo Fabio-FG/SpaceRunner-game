@@ -10,6 +10,9 @@
 <ul>
   <li>Running game animation</li>
   <li>Responsive</li>
+  <li>Score counter</li>
+  <li>Increasing speed influenced by the score</li>
+ 
    <br></br>
   </ul>
   <h2>Tools</h2>
