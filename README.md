@@ -16,13 +16,15 @@
   <li>CSS</li>
   <li>Vanilla JS with Canvas</li>
   </ul>
+    <br></br>
     
-    <h2>Backlog</h2>
-    <ul>
-      <li>Running and jumping animation</li>
-      <li>Improved visuals</li>
-      <li>Mobile onTouch events</li>
-    </ul>
+  <h2>Backlog</h2>
+  <ul>
+   <li>Running and jumping animation</li>
+   <li>Improved visuals</li>
+   <li>Mobile onTouch events</li>
+  </ul>
 
-
+<h2>Demo<h2>
+ <br></br>
 <a href="https://spacerunner-thegame.netlify.app/">Live Demo </a>
