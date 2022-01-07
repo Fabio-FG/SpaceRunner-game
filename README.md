@@ -15,7 +15,7 @@
   <li>HTML</li>
   <li>CSS</li>
   <li>Vanilla JS with Canvas</li>
-  <ul>
+  </ul>
     
     <h2>Backlog</h2>
     <ul>
